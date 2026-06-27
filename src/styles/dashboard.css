@@ -1,0 +1,16 @@
+html, body { margin: 0; background: var(--surface-page); }
+#__next { min-height: 100vh; }
+
+@keyframes ivrise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.iv-rise { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .iv-rise { animation: ivrise 520ms cubic-bezier(0.16,1,0.3,1); }
+}
+.iv-branch-row:hover { background: var(--surface-sunken); }
+
+@keyframes ivslide { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes ivpop { from { transform: translateY(10px); opacity: 0; } to { transform: none; opacity: 1; } }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--stone-300); border-radius: 999px; border: 3px solid var(--surface-page); }
+::-webkit-scrollbar-thumb:hover { background: var(--stone-400); }
